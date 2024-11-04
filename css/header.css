@@ -1,0 +1,47 @@
+header {
+  background-color: var(--secundary-color);
+  padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+}
+
+.header__contact {
+  display: none;
+  background-color: var(--principal-color);
+}
+
+.header__complete-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 0;
+}
+
+.header__logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.header__logo-text {
+  margin: 0;
+  color: var(--principal-color);
+}
+
+.header__list {
+  display: none;
+  padding: 0;
+}
+
+.header__list-item {
+  list-style: none;
+}
+
+.header__list-item-link {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+.header__hamburger-menu-icon {
+  height: 4rem;
+  width: 4rem;
+  
+  fill: var(--tertiary-color);
+}

@@ -1,0 +1,40 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* 
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+} */
+
+:root {
+  --principal-color: #ff8906;
+  --secundary-color: #0f0e17;
+  --tertiary-color: #fffffe;
+  --quaternary-color: #e53170;
+}
