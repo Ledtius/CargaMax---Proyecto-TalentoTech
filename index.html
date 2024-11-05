@@ -20,14 +20,7 @@
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
 
-    <link rel="icon" type="image/icon-x" href="image/favicon.svg" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/icon-x" href="image/favicon-v2.svg" />
 
     <link rel="stylesheet" href="css/general.css" />
 
@@ -44,12 +37,14 @@
       </section>
       <nav class="header__nav">
         <figure class="header__complete-logo">
-          <img
-            src="image/favicon.svg"
-            alt="Icono del logo CargaMax"
-            class="header__logo"
-          />
-          <h2 class="header__logo-text">CargaMax</h2>
+          <a href="#" class="header__complete-logo-link">
+            <img
+              src="image/favicon-v2.svg"
+              alt="Icono del logo CargaMax"
+              class="header__logo"
+            />
+            <h2 class="header__logo-text">CargaMax</h2>
+          </a>
         </figure>
 
         <label class="header__hamburger-menu-label" for="hamburger-menu">
@@ -64,7 +59,11 @@
           </svg>
         </label>
 
-        <input id="hamburger-menu" type="checkbox" class="header__hamburger-menu-checkbox" />
+        <input
+          id="hamburger-menu"
+          type="checkbox"
+          class="header__hamburger-menu-checkbox"
+        />
 
         <ol class="header__list">
           <li class="header__list-item">

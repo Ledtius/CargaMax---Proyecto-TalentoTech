@@ -7,15 +7,18 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
   margin: 0;
+  height: 200vh;
 }
 
-/* 
+
 h1 {
   font-size: 3.2rem;
 }
@@ -30,11 +33,14 @@ h3 {
 
 h4 {
   font-size: 2rem;
-} */
+}
 
 :root {
   --principal-color: #ff8906;
   --secundary-color: #0f0e17;
   --tertiary-color: #fffffe;
   --quaternary-color: #e53170;
+  --padding-left-right-top-bottom: 2rem;
+  --gap-number-1: 0.8rem;
+  --header-height: 84px;
 }

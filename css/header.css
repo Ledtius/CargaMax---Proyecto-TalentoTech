@@ -1,6 +1,15 @@
 header {
   background-color: var(--secundary-color);
-  padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+  min-width: 32rem;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  padding: var(--padding-left-right-top-bottom);
 }
 
 .header__contact {
@@ -8,10 +17,14 @@ header {
   background-color: var(--principal-color);
 }
 
-.header__complete-logo {
+.header__complete-logo-link {
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: var(--gap-number-1);
+}
+
+.header__complete-logo {
   margin: 0;
 }
 
@@ -25,9 +38,50 @@ header {
   color: var(--principal-color);
 }
 
+/* .header__list {
+  visibility: hidden;
+  position: absolute;
+  top: 8.4rem;
+  right: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  gap: 4rem;
+  background-color: var(--principal-color);
+  width: 100%;
+  overflow: hidden;
+
+  padding: var(--gap-number-1);
+  margin: 0;
+} */
+
 .header__list {
-  display: none;
-  padding: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 8.4rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  gap: 4rem;
+  background-color: var(--principal-color);
+  width: 100%;
+  overflow: hidden;
+  padding: var(--gap-number-1);
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Para una transición suave */
+}
+
+/* Cuando el checkbox está marcado, muestra el menú */
+.header__hamburger-menu-checkbox:checked ~ .header__list {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__list-item {
@@ -35,13 +89,29 @@ header {
 }
 
 .header__list-item-link {
+  font-weight: 500;
+  font-size: 2.4rem;
   text-decoration: none;
   color: var(--tertiary-color);
+}
+
+.header__hamburger-menu-label {
+  cursor: pointer;
 }
 
 .header__hamburger-menu-icon {
   height: 4rem;
   width: 4rem;
-  
   fill: var(--tertiary-color);
 }
+
+.header__hamburger-menu-checkbox {
+  display: none;
+}
+
+/* .header__hamburger-menu-checkbox:checked ~ .header__hamburger-menu-icon {
+
+  visibility: visible;
+  opacity: 1;
+  height: calc(100vh - var(--header-height));
+} */
