@@ -1,4 +1,5 @@
 header {
+  width: 100%;
   background-color: var(--secundary-color);
   min-width: 32rem;
   position: fixed;
@@ -55,10 +56,9 @@ header {
   height: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-flow: column;
 
-  gap: 4rem;
   background-color: var(--principal-color);
   width: 100%;
   overflow: hidden;
@@ -102,4 +102,65 @@ header {
   visibility: visible;
   height: calc(100vh - var(--header-height));
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .header__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__contact-text {
+    font-weight: 600;
+    color: var(--tertiary-color);
+    padding: 0 2rem;
+  }
+
+  .header__contact-social {
+    display: flex;
+    padding: 0 0 0 2rem;
+  }
+
+  .header__contact-icons {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .header__contact-icon {
+    width: 2.8rem;
+  }
+
+  .header__nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 3rem;
+  }
+
+  .header__list {
+    width: fit-content;
+    height: fit-content;
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    flex-flow: row;
+    gap: var(--gap-number-2);
+    background-color: var(--secundary-color);
+    /* transition: none; */
+  }
+
+  .header__list-item-link {
+    font-weight: 500;
+    font-size: medium;
+    text-decoration: none;
+    color: var(--tertiary-color);
+  }
+
+  .header__hamburger-menu-icon {
+    display: none;
+  }
 }
