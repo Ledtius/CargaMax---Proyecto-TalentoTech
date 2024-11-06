@@ -105,36 +105,61 @@ header {
 }
 
 @media (min-width: 1024px) {
+  header {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.349);
+  }
+
   .header__contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.8rem 2.8rem;
   }
 
   .header__contact-text {
-    font-weight: 600;
-    color: var(--tertiary-color);
-    padding: 0 2rem;
+    margin: 0;
+    font-weight: 700;
+
+    color: var(--secundary-color);
+    padding: 0 2rem 0 1rem;
   }
 
   .header__contact-social {
     display: flex;
-    padding: 0 0 0 2rem;
   }
 
   .header__contact-icons {
+    padding: 0 0 0 2rem;
+    border-left: 0.1px solid var(--secundary-color);
     display: flex;
     gap: 2rem;
   }
 
   .header__contact-icon {
-    width: 2.8rem;
+    width: 2rem;
+    fill: var(--secundary-color);
+    transition: fill 0.5s;
+  }
+  .header__contact-icon:hover {
+    fill: #fffffe8e;
+  }
+
+  .header__contact-icon:nth-child(1) {
+    width: 1.6rem;
   }
 
   .header__nav {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 3rem;
+  }
+
+  .header__complete-logo-link {
+    transition: transform 0.5s;
+  }
+
+  .header__complete-logo-link:hover {
+    transform: scale(1.04);
   }
 
   .header__list {
@@ -150,17 +175,47 @@ header {
     flex-flow: row;
     gap: var(--gap-number-2);
     background-color: var(--secundary-color);
-    /* transition: none; */
+    /* transition: all 0s; */
+  }
+
+  .header__hamburger-menu-checkbox:checked ~ .header__list {
+    visibility: visible;
+    height: fit-content;
+    opacity: 1;
   }
 
   .header__list-item-link {
     font-weight: 500;
-    font-size: medium;
+    font-size: 1.8rem;
     text-decoration: none;
     color: var(--tertiary-color);
+    position: relative;
+  }
+
+  .header__list-item-link:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .header__list-item-link::before {
+    opacity: 0;
+    width: 10px;
+    content: "";
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.5s;
   }
 
   .header__hamburger-menu-icon {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    padding: 2rem 4rem;
   }
 }
