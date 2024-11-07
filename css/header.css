@@ -3,7 +3,7 @@ header {
   background-color: var(--secundary-color);
   min-width: 32rem;
   position: fixed;
-  z-index: 2;
+  top: 0;
 }
 
 .header__nav {

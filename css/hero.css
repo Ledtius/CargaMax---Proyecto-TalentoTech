@@ -1,0 +1,60 @@
+.hero {
+  padding: 2rem;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  margin: 84px 0 0 0;
+  background-image: url(/image/hero-background.webp);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__card {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border-radius: 2rem;
+  padding: var(--padding-left-right-top-bottom);
+  /* display: flex; */
+  background-color: var(--secundary-color);
+  height: fit-content;
+}
+.hero__text-image {
+  display: flex;
+  /* gap: 2rem; */
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+.hero__artile {
+  color: var(--tertiary-color);
+}
+.hero__title {
+  justify-self: center;
+  margin: 0;
+  margin: 0;
+  color: var(--principal-color);
+}
+.hero__pharagraph {
+  font-weight: 500;
+}
+.hero__image {
+  align-self: center;
+  border-radius: 2rem;
+  width: 20rem;
+}
+.hero__btn {
+  text-decoration: none;
+  background-color: var(--principal-color);
+  padding: 2rem;
+  width: fit-content;
+  align-self: center;
+  color: var(--secundary-color);
+  font-weight: 700;
+  border-radius: 2.8rem;
+}
