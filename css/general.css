@@ -19,7 +19,6 @@ body {
   height: 200vh;
 }
 
-
 h1 {
   font-size: 3.2rem;
 }
@@ -40,7 +39,8 @@ h4 {
   --principal-color: #ff8906;
   --secundary-color: #0f0e17;
   --tertiary-color: #fffffe;
-  --quaternary-color: #e53170;
+  --quaternary-color: #a7a9be;
+  --quinary-color: #e53170;
   --padding-left-right-top-bottom: 2rem;
   --gap-number-1: 0.8rem;
   --gap-number-2: 3.6rem;
