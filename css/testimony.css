@@ -1,0 +1,28 @@
+.testimony__contect {
+  background-color: var(--tertiary-color);
+}
+.testimony {
+  margin: 0 auto;
+  padding: var(--padding-left-right-top-bottom);
+}
+.testimony__title {
+}
+.testimony__cards {
+}
+.testimony__card {
+}
+.testimony__card-text {
+}
+.testimony__card-person {
+}
+
+.testimony__card-image{
+    width: 20rem;
+}
+
+.testimony__name-job {
+}
+.testimony__name {
+}
+.testimony__job {
+}

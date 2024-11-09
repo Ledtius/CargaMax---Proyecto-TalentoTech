@@ -72,6 +72,7 @@
   color: var(--secundary-color);
   font-weight: 500;
   width: fit-content;
+  align-items: center;
 }
 .services__btn {
   font-weight: 700;
