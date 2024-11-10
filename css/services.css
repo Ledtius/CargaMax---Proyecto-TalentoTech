@@ -40,7 +40,14 @@
   padding: var(--padding-left-right-top-bottom);
   width: 28rem;
   margin-bottom: 4rem;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
+
+.services__card:hover {
+  transform: scale(1.01);
+  box-shadow: 4px 4px 20px #fffffe73;
+}
+
 .services__card-general {
   display: flex;
   flex-direction: column;
@@ -95,7 +102,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    width: fit-content;
+    /* width: fit-content; */
   }
 
   .services__title-text {
@@ -120,7 +127,6 @@
   }
 
   .services__title-text {
-
     top: 13rem;
   }
 
