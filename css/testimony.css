@@ -5,8 +5,8 @@
 }
 .testimony {
   margin: 0 auto;
- 
   padding: 2rem 4rem;
+
   max-width: 1440px;
 }
 .testimony__title {
@@ -24,7 +24,7 @@
 }
 .testimony__card {
   border-radius: 2rem;
-  box-shadow: 4px 4px 20px #000000;
+  box-shadow: 0px 4px 8px var(--secundary-color);
   padding: 2rem;
   background-color: var(--tertiary-color);
   position: relative;
@@ -52,6 +52,7 @@
   position: absolute;
   top: -10rem;
   border-radius: 50%;
+  box-shadow: 0px 1px 2px var(--secundary-color);
   width: 16rem;
   height: 16rem;
   object-fit: cover;
@@ -73,7 +74,7 @@
 
 @media (min-width: 768px) {
   .testimony {
-    padding: 2rem 4rem;
+    /* padding: 2rem 4rem; */
   }
   .testimony__cards {
     /* grid-template-columns: 1fr 1fr; */
@@ -84,21 +85,16 @@
   }
 
   .testimony__card:nth-child(3) {
-    /* width: 50rem; */
-    grid-column: 1 / -1; /* Haz que ocupe toda la fila */
-    justify-self: center; /* Centra la tarjeta en la fila */
-    /* Asegura el centrado horizontal */
-
-    align-self: center;
+    grid-column: 1 / -1;
     justify-self: center;
   }
 }
 
-@media (max-width: 1024px) {
-  .testimony {
-    /* max-width: 680px; */
+@media (min-width: 1024px) {
+  .testimony__contect {
+    /* padding: 2rem 2rem; */
   }
-  .testimony__title {
-    /* margin-left: 8rem; */
+  .testimony {
+    /* padding: 2rem 4rem; */
   }
 }
