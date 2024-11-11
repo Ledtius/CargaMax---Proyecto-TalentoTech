@@ -146,7 +146,9 @@
               <a href="#services" class="header__list-item-link">Servicios</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__list-item-link">Testimonios</a>
+              <a href="#testimony" class="header__list-item-link"
+                >Testimonios</a
+              >
             </li>
             <li class="header__list-item">
               <a href="#" class="header__list-item-link">Sobre nosotros</a>
@@ -155,7 +157,7 @@
               <a href="#" class="header__list-item-link">Calculadora</a>
             </li>
             <li class="header__list-item">
-              <a href="#" class="header__list-item-link">Contactanos</a>
+              <a href="#contact" class="header__list-item-link">Contactanos</a>
             </li>
           </ol>
         </nav>
@@ -272,7 +274,6 @@
               <img
                 class="services__card-img"
                 src="/image/services-mesclador.webp"
-                
                 alt="Camion de plataforma"
               />
               <p class="services__card-info">
@@ -296,7 +297,7 @@
         </section>
       </section>
     </section>
-    <section class="testimony__contect">
+    <section class="testimony__contect" id="testimony">
       <section class="testimony">
         <h2 class="testimony__title">Testimonios</h2>
 
@@ -353,10 +354,11 @@
         </section>
       </section>
     </section>
-    <section class="contact__content">
+    <section class="contact__content" id="contact">
       <section class="contact">
-        <h2 class="contact__title">Contactanos</h2>
-        <section class="contact__map-form">
+        <section class="contact__map-title">
+          <h2 class="contact__title">Encuentranos aqui</h2>
+
           <iframe
             class="contact__map"
             title="Mapa CargaMax"
@@ -367,56 +369,73 @@
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </section>
+        <section class="contact__form-title">
+          <h2 class="contact__title">Contactanos</h2>
 
           <form class="contact__form" action="">
             <section class="contact__form-name-lastname">
-              <label class="contact__form-label" for="nombre">Nombre</label>
-              <input
-                class="contact__form-input"
-                type="text"
-                name="nombre"
-                id="nombre"
-                required
-              />
-              <label class="contact__form-label" for="apellido">Apellido</label>
-              <input
-                class="contact__form-input"
-                type="text"
-                name="apellido"
-                id="apellido"
-                required
-              />
+              <section class="contact__form-name">
+                <label class="contact__form-label" for="nombre">Nombre</label>
+                <input
+                  class="contact__form-input"
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  required
+                />
+              </section>
+              <section class="contact__form-lastname">
+                <label class="contact__form-label" for="apellido"
+                  >Apellido</label
+                >
+                <input
+                  class="contact__form-input"
+                  type="text"
+                  name="apellido"
+                  id="apellido"
+                  required
+                />
+              </section>
             </section>
-            <label for="correo" class="contact__form-label"
-              >Correo Electronico</label
-            >
-            <input
-              class="contact__form-input"
-              type="email"
-              name="correo"
-              id="correo"
-              required
-            />
-            <label for="telefono" class="contact__form-label"
-              >Numero Telefonico</label
-            >
-            <input
-              class="contact__form-input"
-              type="tel"
-              name="telefono"
-              id="telefono"
-              required
-            />
-            <label for="mensaje" class="contact__form-label">Mensaje</label>
-            <textarea
-              class="contact__form-texttarea"
-              name="mensaje"
-              id="mensaje"
-              required
-              cols="30"
-              rows="10"
-              required
-            ></textarea>
+            <section class="contact__form-email-phone">
+              <section class="contact__form-email">
+                <label for="correo" class="contact__form-label"
+                  >Correo Electronico</label
+                >
+                <input
+                  class="contact__form-input"
+                  type="email"
+                  name="correo"
+                  id="correo"
+                  required
+                />
+              </section>
+              <section class="contact__form-phone">
+                <label for="telefono" class="contact__form-label"
+                  >Numero Telefonico</label
+                >
+                <input
+                  class="contact__form-input"
+                  type="tel"
+                  name="telefono"
+                  id="telefono"
+                  required
+                />
+              </section>
+            </section>
+            <section class="contact__form-messague">
+              <label for="mensaje" class="contact__form-label">Mensaje</label>
+              <textarea
+                class="contact__form-texttarea"
+                name="mensaje"
+                id="mensaje"
+                required
+                cols="30"
+                rows="10"
+                required
+              ></textarea>
+            </section>
             <button class="contact__form-btn" type="submit">Enviar</button>
           </form>
         </section>

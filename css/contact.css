@@ -91,6 +91,7 @@
   .contact__map-form {
     grid-template-areas: "map form";
     justify-content: space-between;
+
   }
 
   .contact__map {
