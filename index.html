@@ -32,6 +32,10 @@
 
     <link rel="stylesheet" href="css/testimony.css" />
 
+    <link rel="stylesheet" href="css/contact.css" />
+
+    <link rel="stylesheet" href="css/footer.css" />
+
     <title>CargaMax | Empresa de Alquiler de Vehículos de Carga Pesada</title>
   </head>
   <body>
@@ -248,9 +252,6 @@
               <p class="services__card-info">
                 Nuestras grúas de carga pesada están equipadas para levantar y
                 mover materiales de gran tamaño con total seguridad y precisión.
-                Ideales para proyectos industriales y de construcción, ofrecen
-                un rendimiento confiable y versátil para cualquier desafío de
-                carga.
               </p>
             </section>
             <section class="services__card-characts">
@@ -271,6 +272,7 @@
               <img
                 class="services__card-img"
                 src="/image/services-mesclador.webp"
+                
                 alt="Camion de plataforma"
               />
               <p class="services__card-info">
@@ -348,6 +350,75 @@
               confiable, ideal para proyectos que requieren transporte pesado."
             </p>
           </section>
+        </section>
+      </section>
+    </section>
+    <section class="contact__content">
+      <section class="contact">
+        <h2 class="contact__title">Contactanos</h2>
+        <section class="contact__map-form">
+          <iframe
+            class="contact__map"
+            title="Mapa CargaMax"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12573.813905137868!2d-73.77420505789917!3d6.949810311415436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e428d7216dfb827%3A0x54d87d89cfc6c3e0!2sPatio%20Piara!5e0!3m2!1ses!2sco!4v1731247548834!5m2!1ses!2sco"
+            width="600"
+            height="450"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+          <form class="contact__form" action="">
+            <section class="contact__form-name-lastname">
+              <label class="contact__form-label" for="nombre">Nombre</label>
+              <input
+                class="contact__form-input"
+                type="text"
+                name="nombre"
+                id="nombre"
+                required
+              />
+              <label class="contact__form-label" for="apellido">Apellido</label>
+              <input
+                class="contact__form-input"
+                type="text"
+                name="apellido"
+                id="apellido"
+                required
+              />
+            </section>
+            <label for="correo" class="contact__form-label"
+              >Correo Electronico</label
+            >
+            <input
+              class="contact__form-input"
+              type="email"
+              name="correo"
+              id="correo"
+              required
+            />
+            <label for="telefono" class="contact__form-label"
+              >Numero Telefonico</label
+            >
+            <input
+              class="contact__form-input"
+              type="tel"
+              name="telefono"
+              id="telefono"
+              required
+            />
+            <label for="mensaje" class="contact__form-label">Mensaje</label>
+            <textarea
+              class="contact__form-texttarea"
+              name="mensaje"
+              id="mensaje"
+              required
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+            <button class="contact__form-btn" type="submit">Enviar</button>
+          </form>
         </section>
       </section>
     </section>

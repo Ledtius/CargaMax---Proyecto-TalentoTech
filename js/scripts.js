@@ -7,3 +7,16 @@ menuLinks.forEach((link) => {
     menuCheckbox.checked = false;
   });
 });
+
+
+const contactContent = document.querySelector(".header__contact-content");
+const navContent = document.querySelector(".header__nav-content");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    contactContent.classList.add("oculto");
+  } else {
+    contactContent.classList.remove("oculto");
+  }
+});
+

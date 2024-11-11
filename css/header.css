@@ -119,7 +119,51 @@ header {
 }
 
 @media (min-width: 1024px) {
-  header {
+  /* Estilos por defecto de .header__contact-content (visible) */
+  .header__contact-content {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    max-height: 100px; /* Ajusta según el tamaño de tu contenido */
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+  }
+
+  /* Estilos de .oculto para ocultar suavemente */
+  .header__contact-content.oculto {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Ocupa cero altura */
+  }
+
+  /* Ajuste del .header__nav-content para que haga la transición más suave */
+  .header__nav-content {
+    transition: margin-top 0.5s ease; /* Margen ajustable */
+  }
+  /* Estilos por defecto de .header__contact-content (visible) */
+  .header__contact-content {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    max-height: 100px; /* Ajusta según el tamaño de tu contenido */
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+    overflow: hidden;
+  }
+
+  /* Estilos de .oculto para ocultar suavemente */
+  .header__contact-content.oculto {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0; /* Ocupa cero altura */
+  }
+
+  /* Ajuste del .header__nav-content para que haga la transición más suave */
+  .header__nav-content {
+    transition: margin-top 0.5s ease; /* Margen ajustable */
+  }
+
+  .header__nav-content {
+    bottom: 50px;
   }
 
   .header__contact {

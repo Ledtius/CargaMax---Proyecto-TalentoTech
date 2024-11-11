@@ -108,6 +108,12 @@
     top: 8rem;
   }
 
+  .services__card-img {
+    /* height: 18rem; */
+    /* width: 18rem; */
+    /* height: 32rem; */
+  }
+
   .services__cards {
     width: 50%;
   }
@@ -140,7 +146,8 @@
   }
 
   .services__card-img {
-    width: 32rem;
+    width: 24rem;
+    /* height: 32rem; */
     align-self: center;
   }
 
@@ -151,6 +158,10 @@
 
   .services__card-characts {
     flex-direction: row;
+  }
+
+  .services__card-characts-title {
+    margin-bottom: 1rem;
   }
 
   .services__card-charact {

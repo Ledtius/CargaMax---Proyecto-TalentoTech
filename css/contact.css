@@ -1,0 +1,135 @@
+.contact__content {
+  min-width: 32rem;
+
+  /* background: linear-gradient(to bottom, #fffffe, #323144); */
+  /* background-color: #1c1b29; */
+}
+.contact {
+  height: 100vh;
+  min-width: 32rem;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 2rem 4rem;
+  /* width: fit-content; */
+  gap: var(--gap-number-2);
+}
+.contact__title {
+  /* color: blue; */
+}
+.contact__map-section {
+  /* border-radius: 2rem; */
+}
+
+.contact__map-form {
+  margin-top: 4rem;
+  justify-content: center;
+  display: grid;
+  grid-template-areas:
+    "map"
+    "form";
+}
+
+.contact__map {
+  margin-bottom: 4rem;
+  grid-area: "map";
+  border-radius: 2rem;
+  border: 1px solid #fffffe;
+  width: 28rem;
+  height: 35rem;
+  /* width: 28rem;
+  height: 35rem; */
+  box-shadow: 0px 4px 8px var(--secundary-color);
+}
+.contact__form {
+  grid-area: "form";
+  display: flex;
+  width: 28rem;
+  flex-direction: column;
+  gap: 2rem;
+  /* height: 0rem; */
+  border: 1px solid;
+  padding: 2rem;
+  box-shadow: 0px 4px 8px var(--secundary-color);
+
+  border-radius: 2rem;
+}
+.contact__form-name-lastname {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* gap: var(--gap-number-1); */
+}
+.contact__form-label {
+  font-weight: 700;
+  /* color: var(--principal-color); */
+}
+.contact__form-input {
+  text-align: center;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid;
+  /* padding: 1rem; */
+}
+.contact__form-label {
+}
+.contact__form-texttarea {
+  border-radius: 2rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.contact__form-btn {
+  /* width: 20rem; */
+  height: 4rem;
+  border-radius: 2rem;
+  font-weight: 800;
+  border: 1px solid black;
+  background-color: var(--principal-color);
+}
+
+@media (min-width: 768px) {
+  .contact__map-form {
+    grid-template-areas: "map form";
+    justify-content: space-between;
+  }
+
+  .contact__map {
+    height: 100%;
+    width: 35rem;
+    /* max-width: 100%; */
+  }
+
+  .contact__title {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__form {
+    width: 40rem;
+    /* background-color: aqua; */
+  }
+
+  .contact__map-form {
+    gap: 4rem;
+    justify-content: space-between;
+  }
+
+  .contact__map {
+    height: 100%;
+    min-width: 45rem;
+    width: 40rem;
+    /* max-width: 55rem; */
+    /* max-width: 100%; */
+  }
+  .contact__form-name-lastname {
+    display: flex;
+    /* flex-direction: row; */
+  }
+  .contact__form-name-lastname {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* gap: var(--gap-number-1); */
+  }
+}
