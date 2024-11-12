@@ -5,12 +5,12 @@
 
 .services {
   margin: 0 auto;
+  padding: 2rem 4rem;
+  max-width: 1440px;
   display: flex;
   min-width: 32rem;
   flex-direction: column;
   gap: var(--padding-left-right-top-bottom);
-  padding: 2rem 4rem;
-  max-width: 1440px;
 }
 .services__title-text {
 }
