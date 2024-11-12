@@ -1,6 +1,18 @@
 .contact__content {
-  background-color: var(--tertiary-color);
+  background-color: var(--principal-color);
   min-width: 32rem;
+  position: relative;
+}
+
+.contact__content::before {
+  content: "";
+  /* z-index: ; */
+  height: 20px;
+  width: 100%;
+  border: 1px solid #0f0e17da;
+  background-color: #0f0e17da;
+  position: absolute;
+  bottom: 0;
 }
 
 .contact {
@@ -19,8 +31,10 @@
   /* display: none; */
 }
 .contact__map-title {
+  /* color: var(--tertiary-color); */
 }
 .contact__title {
+  color: var(--secundary-color);
 }
 .contact__map {
   grid-area: "map";
@@ -32,6 +46,7 @@
   /* width: 100%; */
 }
 .contact__form-title {
+  color: var(--secundary-color);
 }
 .contact__form {
   grid-area: "form";
@@ -44,6 +59,8 @@
   box-shadow: 0px 4px 20px #0000006b;
   padding: 2rem;
   width: 100%;
+  background-color: var(--tertiary-color);
+  margin-bottom: 4rem;
 }
 .contact__form-name-lastname {
   display: flex;
@@ -56,10 +73,11 @@
   gap: 1rem;
 }
 .contact__form-label {
+  color: black;
 }
 .contact__form-input {
   border-radius: 1rem;
-  border: 1px solid;
+  border: 2px solid;
   height: 3rem;
   padding: 1rem;
 }
@@ -90,14 +108,18 @@
 }
 .contact__form-texttarea {
   border-radius: 1rem;
+  border: 2px solid;
   padding: 1rem;
 }
 .contact__form-btn {
+  /* padding: 2rem; */
   font-weight: 800;
   border-radius: 2rem;
   border: 1px solid;
-  height: 3rem;
-  background-color: var(--principal-color);
+  height: 4rem;
+  color: var(--tertiary-color);
+  background-color: var(--quinary-color);
+  cursor: pointer;
 }
 
 @media (min-width: 778px) {
@@ -106,6 +128,7 @@
     grid-template-areas: "map form";
     gap: 2rem;
     height: fit-content;
+    padding-bottom: 6rem;
     /* justify-content: space-between; */
   }
   .contact__title {
@@ -123,8 +146,11 @@
     flex-direction: column;
     gap: 1rem;
     max-width: 50rem;
+    max-height: 425px;
+
     font-weight: 600;
     border-radius: 1rem;
+    margin-bottom: 0rem;
   }
 
   .contact__form-name-lastname {
@@ -137,6 +163,7 @@
   .contact__title {
     justify-self: center;
   }
+
 }
 
 @media (min-width: 1024px) {
@@ -151,6 +178,15 @@
   }
   .contact__title {
     justify-self: flex-start;
+  }
+  .contact__form {
+    margin-bottom: 0rem;
+  }
+  .contact__form-btn {
+    transition: transform 0.5s;
+  }
+  .contact__form-btn:hover {
+    transform: scale(1.01);
   }
 
   .contact__map-title {

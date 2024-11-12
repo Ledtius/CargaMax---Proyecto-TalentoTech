@@ -1,8 +1,19 @@
-.testimony__contect {
+.testimony__content {
   min-width: 32rem;
-
+  position: relative;
   background-color: var(--tertiary-color);
 }
+.testimony__content::before {
+  content: "";
+  /* z-index: ; */
+  height: 20px;
+  width: 100%;
+  border: 1px solid #ff8b0600;
+  background-color: #ff8b068a;
+  position: absolute;
+  bottom: 0;
+}
+
 .testimony {
   margin: 0 auto;
   padding: 2rem 4rem;
@@ -47,6 +58,7 @@
 }
 .testimony__card:nth-child(3) {
   grid-area: "card-3";
+  margin-bottom: 4rem;
 }
 
 .testimony__card-image {
@@ -95,4 +107,3 @@
     justify-self: center;
   }
 }
-

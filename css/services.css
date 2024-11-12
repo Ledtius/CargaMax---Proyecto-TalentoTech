@@ -1,6 +1,17 @@
 .services__content {
   background-color: var(--secundary-color);
   min-width: 32rem;
+  position: relative;
+}
+
+.services__content::before {
+  content: "";
+  height: 20px;
+  width: 100%;
+  border: 1p solid #fffffeec;
+  background-color: #fffffeec;
+  position: absolute;
+  bottom: 0;
 }
 
 .services {
