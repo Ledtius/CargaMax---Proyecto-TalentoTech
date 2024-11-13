@@ -8,7 +8,7 @@ menuLinks.forEach((link) => {
   });
 });
 
-
+ /* Contactos del header */
 const contactContent = document.querySelector(".header__contact-content");
 const navContent = document.querySelector(".header__nav-content");
 
