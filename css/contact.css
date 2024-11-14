@@ -1,5 +1,6 @@
 .contact__content {
   background-color: var(--principal-color);
+
   min-width: 32rem;
   position: relative;
 }
@@ -28,6 +29,11 @@
   justify-content: center;
   /* height: fit-content; */
   width: 100%;
+  /* background-image: url(/image/about-us.hero.webp);
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; */
   /* display: none; */
 }
 .contact__map-title {
@@ -35,6 +41,12 @@
 }
 .contact__title {
   color: var(--secundary-color);
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  max-width: 25rem;
+  box-shadow: 0px 4px 20px #0000006b;
 }
 .contact__map {
   grid-area: "map";
@@ -132,6 +144,7 @@
     /* justify-content: space-between; */
   }
   .contact__title {
+    max-width: fit-content;
   }
   .contact__map {
     max-width: 25rem;
@@ -163,7 +176,6 @@
   .contact__title {
     justify-self: center;
   }
-
 }
 
 @media (min-width: 1024px) {
