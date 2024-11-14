@@ -1,4 +1,4 @@
-/* Menu links */
+/* Desaparicion del menu al clickear los links - movil */
 const menuCheckbox = document.getElementById("hamburger-menu");
 const menuLinks = document.querySelectorAll(".header__list-item-link");
 
@@ -8,7 +8,7 @@ menuLinks.forEach((link) => {
   });
 });
 
- /* Contactos del header */
+/* Desaparicion del area de contacto al scrollear - pc */
 const contactContent = document.querySelector(".header__contact-content");
 const navContent = document.querySelector(".header__nav-content");
 
@@ -19,4 +19,3 @@ window.addEventListener("scroll", () => {
     contactContent.classList.remove("oculto");
   }
 });
-

@@ -28,7 +28,7 @@ footer {
   flex-direction: column;
   gap: 1rem;
 }
-.footer___list-item {
+.footer__list-item {
 }
 
 .footer__list-item-link {
