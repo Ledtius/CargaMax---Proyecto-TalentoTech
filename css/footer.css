@@ -13,7 +13,6 @@ footer {
   gap: 3rem;
 }
 
-
 .footer__list-title {
   width: fit-content;
 }
@@ -39,7 +38,7 @@ footer {
   gap: 1rem;
 }
 
-.footer__list-item-link:hover{
+.footer__list-item-link:hover {
   text-decoration: underline;
 }
 

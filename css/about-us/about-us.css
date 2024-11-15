@@ -20,23 +20,25 @@
   content: "";
   height: 20px;
   width: 100%;
-  border: 1p solid #000000ec;
-  background-color: #ffff19ec;
+  border: 1p solid var(--principal-color);
+  background-color:var(--principal-color);
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
 .about-us__general {
-  position: relative;
 }
+
 .about-us__title {
   color: var(--tertiary-color);
   margin-top: 0;
 }
 .about-us__text-image {
+  position: relative;
   display: flex;
   gap: 4rem;
+  height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 4rem;
@@ -44,25 +46,30 @@
 .about-us__text {
   text-align: justify;
   color: var(--quaternary-color);
-  max-width: 64rem;
-  position: sticky;
-  bottom: 20rem;
-  width: fit-content;
+  max-width: 80rem;
 }
 .about-us__image {
   min-width: 25rem;
-
+  max-width: 65rem;
   border-radius: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 932px) {
   .about-us__text-image {
     flex-direction: row;
+    /* max-width: 25rem; */
   }
 }
 
 @media (min-width: 1024px) {
   .about-us {
+    padding: 4rem 4rem;
     margin-top: 118.281px;
+  }
+  .about-us__title-text {
+    position: sticky;
+    top: 13rem;
+    /* width: fit-content; */
+    height: fit-content;
   }
 }

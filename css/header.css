@@ -39,7 +39,7 @@ header {
   display: flex;
   align-items: center;
   gap: var(--gap-number-1);
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .header__complete-logo-link:active {
@@ -195,7 +195,7 @@ header {
   .header__contact-icon {
     width: 2rem;
     fill: var(--secundary-color);
-    transition: fill 0.5s;
+    transition: fill 0.5s ease;
   }
   .header__contact-icon:hover {
     fill: #fffffe8e;
@@ -203,6 +203,9 @@ header {
 
   .header__contact-icon:nth-child(1) {
     width: 1.6rem;
+  }
+  .header__contact-icon--primary:hover {
+    fill: var(--secundary-color);
   }
 
   .header__nav {
