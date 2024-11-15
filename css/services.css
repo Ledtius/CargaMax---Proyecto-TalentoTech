@@ -31,6 +31,7 @@
   color: var(--tertiary-color);
 }
 .services__pharagraph {
+  text-align: justify;
   color: var(--quaternary-color);
 }
 .services__cards {
@@ -71,6 +72,7 @@
 }
 
 .services__card-info {
+  text-align: justify;
 }
 .services__card-characts {
   margin-bottom: 2rem;
