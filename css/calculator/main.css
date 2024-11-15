@@ -1,6 +1,10 @@
 .main {
   margin-top: 8rem;
   min-width: 32rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* height: 60rem; */
   /* background-color: grey; */
 }
