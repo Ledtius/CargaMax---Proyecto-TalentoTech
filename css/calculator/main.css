@@ -15,22 +15,6 @@
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .main-contenct {
-    flex-direction: row;
-    gap: 4rem;
-  }
-}
-@media (min-width: 1024px) {
-  .main {
-    margin-top: 12rem;
-  }
-  .main-contenct {
-    justify-content: space-between;
-    align-items: center;
-  
-  }
-}
 .main__article {
 }
 .main__title {
@@ -41,24 +25,109 @@
   max-width: 475px;
 }
 .main__calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  /* background-color: #0f0e17d2; */
+  background-color: #00002b;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 .main__show-result {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.932);
+  background-color: white;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-weight: 700;
 }
+
 .main__item {
+  width: 100%;
+  /* align-items: center; */
 }
 .main__label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .main__label {
+  display: flex;
+  font-weight: 700;
+  align-self: flex-start;
+  gap: 0.8rem;
+  text-align:center;
+  color: #ccc;
 }
 .main__svg {
   width: 2rem;
 }
+
+.main__svg-1 {
+  /* fill: rgba(177, 11, 11, 0.801); */
+  fill: rgba(255, 0, 0, 0.753);
+}
+.main__svg-2 {
+  fill: rgba(255, 0, 0, 0.753);
+}
+.main__svg-3 {
+  fill: rgba(0, 128, 0, 0.623);
+}
+
 .main__input {
+  font-family: system-ui;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  height: 3rem;
+  padding: 1.6rem;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+.main__input:hover {
+  border-color: #ff8b0694;
+  box-shadow: inset 0px 0px 4px #ff8b06fb;
 }
 .main__alight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .main__btn {
+  border-radius: 1rem;
+  height: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
 }
 .main__sgv--btn {
   /* width: 4rem; */
+}
+
+@media (min-width: 768px) {
+  .main-contenct {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .main__alight {
+    align-items: center;
+    flex-direction: row;
+  }
+  .main__btn {
+    height: 5rem;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  .main {
+    margin-top: 12rem;
+  }
+  .main-contenct {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
