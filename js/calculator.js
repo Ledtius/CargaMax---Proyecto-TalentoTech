@@ -1,0 +1,26 @@
+
+const distancia = document.getElementById("distancia");
+
+const consumoVehicular = document.getElementById("consumo-vehicular");
+
+const precioCombustible = document.getElementById("precio-combustible");
+
+const btn = document.getElementById("btn");
+
+const resultado = document.getElementById("resultado");
+// alert(distancia * consumoVehicular);
+
+function clickForm() {
+    const distanciaValue = distancia.value;
+    const consumoVehicularValue = consumoVehicular.value;
+    const precioCombustibleValue = precioCombustible.value;
+    event.preventDefault();
+    
+    const constoTotal =
+    (distanciaValue / consumoVehicularValue) * precioCombustibleValue;
+    
+    
+    resultado.textContent = constoTotal;
+}
+
+btn.addEventListener("click", clickForm);

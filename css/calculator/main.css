@@ -58,6 +58,8 @@
   border-radius: 1rem;
   text-align: center;
   font-weight: 700;
+  max-width: 250.922px;
+  overflow-wrap:break-word;
 }
 
 .main__item {
@@ -166,6 +168,11 @@ input[type="number"] {
     flex-direction: row;
     gap: 4rem;
   }
+
+  .main__show-result {
+    max-width: 386.062px;
+  }
+
   .main__alight {
     align-items: center;
     flex-direction: row;
