@@ -11,10 +11,10 @@ const resultado = document.getElementById("resultado");
 // alert(distancia * consumoVehicular);
 
 function clickForm() {
+    event.preventDefault();
     const distanciaValue = distancia.value;
     const consumoVehicularValue = consumoVehicular.value;
     const precioCombustibleValue = precioCombustible.value;
-    event.preventDefault();
     
     const constoTotal =
     (distanciaValue / consumoVehicularValue) * precioCombustibleValue;
