@@ -25,12 +25,20 @@ function clickForm() {
     distanciaAlert.innerHTML =
       '<strong style="color:#ff8906">Ingrese un valor</storng>';
     console.log(distanciaAlert);
-    return;
+    // return;
   } else {
     distanciaAlert.innerHTML = "";
   }
 
-  if (!consumoVehicularValue) {
+  if (!precioCombustibleValue) {
+    precioCombustibleAlert.innerHTML =
+      '<strong style="color:#ff8906">Ingrese un valor</strong>';
+    // return;
+  } else {
+    precioCombustibleAlert.innerHTML = "";
+  }
+
+  if (consumoVehicularValue === "") {
     consumoVehicularAlert.innerHTML =
       '<strong style="color:#ff8906">Ingrese un valor</strong>';
     return;
@@ -38,20 +46,13 @@ function clickForm() {
     consumoVehicularAlert.innerHTML = "";
   }
 
-  if (consumoVehicularValue == 0) {
+  const consumoVehicularValueInt = Number(consumoVehicularValue);
+
+  if (consumoVehicularValueInt === 0) {
     consumoVehicularAlert.innerHTML =
       '<strong style="color:red">Valor invalido</strong>';
-    return;
+    // return;
   }
-  
-  if (!precioCombustibleValue) {
-    precioCombustibleAlert.innerHTML =
-      '<strong style="color:#ff8906">Ingrese un valor</strong>';
-    return;
-  } else {
-    precioCombustibleAlert.innerHTML = "";
-  }
-
 
   const constoTotal =
     (distanciaValue / consumoVehicularValue) * precioCombustibleValue;
