@@ -63,7 +63,7 @@
   grid-area: "form";
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   max-width: 25rem;
   font-weight: 600;
   border-radius: 1rem;
@@ -198,7 +198,6 @@ textarea:focus {
 .contact__alert-name {
   font-size: 1.6rem;
   height: 16px;
-
 }
 
 .contact__modal {
@@ -261,16 +260,17 @@ textarea:focus {
   .contact__map {
     height: 100%;
     max-width: 25rem;
-    max-height: 532px;
+    max-height: 545px;
   }
   .contact__form-title {
     height: 100%;
   }
   .contact__form {
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     max-width: 50rem;
-    max-height: 545px;
+    max-height: 550px;
+    height: 100%;
 
     font-weight: 600;
     border-radius: 1rem;

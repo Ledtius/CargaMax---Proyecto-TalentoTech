@@ -10,7 +10,7 @@ const precioCombustible = document.getElementById("precio-combustible");
 
 const precioCombustibleAlert = document.getElementById("input__alert-3");
 
-const btn = document.getElementById("btn");
+const btnCalculator = document.getElementById("main__btn");
 
 const resultado = document.getElementById("resultado");
 // alert(distancia * consumoVehicular);
@@ -59,4 +59,4 @@ function clickForm() {
   resultado.textContent = "$" + constoTotal + " COP";
 }
 
-btn.addEventListener("click", clickForm);
+btnCalculator.addEventListener("click", clickForm);
