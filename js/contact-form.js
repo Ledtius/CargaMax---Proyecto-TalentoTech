@@ -11,6 +11,8 @@ const mensaje = document.getElementById("mensaje");
 const modal = document.getElementById("modal");
 const btnModal = document.querySelector(".contact__modal-btn");
 
+const iconModal = document.querySelector(".contact__modal-icon");
+
 /* Alertas del formmulario */
 
 const nombreAlert = document.querySelector(".contact__alert-name");
@@ -77,13 +79,18 @@ function clickBtn() {
   } else {
     modal.style.opacity = "1";
     modal.style.pointerEvents = "unset";
+    // btnModal.style.animation = "size-modal-icon 6s infinite ease;";
+
+    iconModal.setAttribute(
+      "style",
+      "animation: size-modal-icon 1s ease"
+    );
   }
 }
 
 function closeBtn() {
   modal.style.opacity = "0";
   modal.style.pointerEvents = "none";
-
   nombre.value = "";
   apellido.value = "";
   telefono.value = "";

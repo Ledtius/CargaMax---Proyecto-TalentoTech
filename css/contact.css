@@ -172,6 +172,14 @@ textarea:focus {
   fill: var(--tertiary-color);
 }
 
+.contact__alert-message,
+.contact__alert-phone,
+.contact__alert-email,
+.contact__alert-lastname,
+.contact__alert-name {
+  font-size: 1.6rem;
+  height: 16px;
+}
 .contact__modal-content {
   display: flex;
   z-index: 3;
@@ -189,15 +197,7 @@ textarea:focus {
   inset: 0;
   align-items: center;
   justify-content: center;
-}
-
-.contact__alert-message,
-.contact__alert-phone,
-.contact__alert-email,
-.contact__alert-lastname,
-.contact__alert-name {
-  font-size: 1.6rem;
-  height: 16px;
+  transition: all 0.5s ease;
 }
 
 .contact__modal {
@@ -230,9 +230,23 @@ textarea:focus {
   margin: 0;
 }
 
-.contact__icon {
+@keyframes size-modal-icon {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50%,
+  75% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.contact__modal-icon {
   width: 8rem;
   fill: green;
+  /* animation: size-modal-icon 6s infinite ease; */
 }
 
 .contact__modal-btn {
