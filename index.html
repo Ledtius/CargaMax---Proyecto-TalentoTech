@@ -394,7 +394,7 @@
 
     <section class="contact__content" id="contact">
       <section class="contact">
-        <section id="modal"  class="contact__modal-content">
+        <section id="modal" class="contact__modal-content">
           <section class="contact__modal">
             <h4 class="contact__modal-title">Formulario Enviado</h4>
             <svg
@@ -440,6 +440,9 @@
                   placeholder="Ingresa tu Nombre"
                   required
                 />
+                <div class="contact__alert-name">
+                  
+                </div>
               </section>
               <section class="contact__form-lastname">
                 <label class="contact__form-label" for="apellido"
@@ -453,6 +456,9 @@
                   placeholder="Ingresa tu Apellido"
                   required
                 />
+                <div class="contact__alert-lastname">
+                  
+                </div>
               </section>
             </section>
             <section class="contact__form-email-phone">
@@ -469,6 +475,9 @@
                   placeholder="ejemplo@correo.com"
                   required
                 />
+                <div class="contact__alert-email">
+                  
+                </div>
               </section>
               <section class="contact__form-phone">
                 <label for="telefono" class="contact__form-label"
@@ -481,6 +490,9 @@
                   id="telefono"
                   placeholder="Ejemplo: +57 311 1234567"
                 />
+                <div class="contact__alert-phone">
+                  
+                </div>
               </section>
             </section>
             <section class="contact__form-messague">
@@ -496,10 +508,11 @@
                 placeholder="Escribe tu mensaje aquí"
                 required
               ></textarea>
+              <div class="contact__alert-message">
+                  
+              </div>
             </section>
-            <button 
-            id="contact__btn"
-            class="contact__form-btn" type="submit">
+            <button id="contact__btn" class="contact__form-btn" type="submit">
               <svg
                 aria-hidden="true"
                 class="contact__form-svg"

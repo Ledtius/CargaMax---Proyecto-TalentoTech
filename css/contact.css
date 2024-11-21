@@ -191,9 +191,14 @@ textarea:focus {
   justify-content: center;
 }
 
-.contact__modal-content:target {
-  --opacity: 1;
-  --pointer: unset;
+.contact__alert-message,
+.contact__alert-phone,
+.contact__alert-email,
+.contact__alert-lastname,
+.contact__alert-name {
+  font-size: 1.6rem;
+  height: 16px;
+
 }
 
 .contact__modal {

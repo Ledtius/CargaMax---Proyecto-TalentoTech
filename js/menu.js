@@ -33,12 +33,17 @@ const mensaje = document.getElementById("mensaje");
 const modal = document.getElementById("modal");
 const btnModal = document.querySelector(".contact__modal-btn");
 
-console.log(btnModal);
-console.log(telefono);
-console.log(apellido);
-console.log(nombre);
-console.log(mensaje);
-console.log(correo);
+/* Alestas del formmulario */
+
+const nombreAlert = document.querySelector(".contact__alert-name");
+
+const apellidoAlert = document.querySelector(".contact__alert-lastname");
+
+const correoAlert = document.querySelector(".contact__alert-email");
+
+const telefonoAlert = document.querySelector(".contact__alert-phone");
+
+const mensajeAlert = document.querySelector(".contact__alert-message");
 
 function clickBtn() {
   event.preventDefault();
@@ -48,6 +53,21 @@ function clickBtn() {
   const telefonoValue = telefono.value;
   const mensajeValue = mensaje.value;
 
+  if (!nombreValue) {
+    nombreAlert.innerHTML =
+      '<strong style= "color:#ff8906">Ingrese un valor</strong>';
+  } else {
+    nombreAlert.innerHTML = "";
+  }
+  
+  if (!apellidoAlert) {
+    apellidoAlert.innerHTML =
+    '<strong style= "color:#ff8906">Ingrese un valor</strong>';
+  } else {
+    apellidoAlert.innerHTML = "";
+  }
+  console.log(apellidoAlert);
+
   if (
     !nombreValue ||
     !apellidoValue ||
@@ -55,7 +75,6 @@ function clickBtn() {
     !telefonoValue ||
     !mensajeValue
   ) {
-    console.log("return;");
     return;
   } else {
     modal.style.opacity = "1";
@@ -68,11 +87,15 @@ function closeBtn() {
   modal.style.pointerEvents = "none";
 
   nombre.value = "";
-   apellido.value = "";
-   telefono.value = "";
-   correo.value = "";
-   mensaje.value = "";
+  apellido.value = "";
+  telefono.value = "";
+  correo.value = "";
+  mensaje.value = "";
 }
+
+/* 21px */
 
 btn.addEventListener("click", clickBtn);
 btnModal.addEventListener("click", closeBtn);
+
+/* Verificaciones del formulario */
