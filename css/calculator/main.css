@@ -184,10 +184,11 @@ input[type="number"] {
   .main__alight {
     align-items: center;
     flex-direction: row;
+
   }
   .main__btn {
     height: 5rem;
-    align-self: flex-end;
+    align-self: center;
   }
 }
 @media (min-width: 1024px) {
