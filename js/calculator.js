@@ -58,6 +58,11 @@ function clickForm() {
     (distanciaValue / consumoVehicularValue) * precioCombustibleValue;
 
   resultado.textContent = "$" + constoTotal + " COP";
+
+  distancia.value = "";
+  consumoVehicular.value = "";
+  precioCombustible.value = "";
+
 }
 
 btnCalculator.addEventListener("click", clickForm);
