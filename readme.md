@@ -4,4 +4,4 @@ Este proyecto es una página web funcional diseñada para la empresa ficticia Ca
 
 Realizado en el Bootcamp de Desarrollo Web P.1 de TalentoTECH, del MinTIC.
 
-![Mockup de CargaMax](image/mockup-public.webp)
+![Mockup de CargaMax](image/mockup-public.png)
