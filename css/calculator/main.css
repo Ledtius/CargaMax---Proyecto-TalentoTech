@@ -34,8 +34,7 @@
 
 .main__article {
   height: 100%;
-  position: sticky;
-  top: 12rem;
+
 }
 .main__title {
   margin-top: 0;
@@ -211,6 +210,8 @@ input[type="number"] {
   }
   .main__article {
     width: 50%;
+    position: sticky;
+    top: 12rem;
   }
   .main__input {
     height: 4rem;
