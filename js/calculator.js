@@ -12,57 +12,64 @@ const precioCombustibleAlert = document.getElementById("input__alert-3");
 
 const btnCalculator = document.getElementById("main__btn");
 
-const resultado = document.getElementById("resultado");
-// alert(distancia * consumoVehicular);
+const form = document.querySelector(".main__calculator");
 
-function clickForm() {
-  event.preventDefault();
-  const distanciaValue = distancia.value;
-  const consumoVehicularValue = consumoVehicular.value;
-  const precioCombustibleValue = precioCombustible.value;
+const selects = document.querySelectorAll(".main__select");
 
-  if (!distanciaValue) {
-    distanciaAlert.innerHTML =
-      '<strong style="color:#ff8906">Ingrese un valor</storng>';
-    console.log(distanciaAlert);
-    // return;
-  } else {
-    distanciaAlert.innerHTML = "";
+const select = document.querySelector(".main__select");
+
+const options = document.querySelectorAll(".main__option");
+const option = document.querySelector(".main__option");
+
+function optionsValues(unit, index) {
+  /* Seleccion de las opciones dentro del select */
+  if (index <= 1) {
+    console.log(`Unit: ${unit.value}\nIndex: ${index}`);
+
+    option.addEventListener("click", function sadf() {
+      console.log("Entro");
+      if (index === 1) {
+        console.log(`Elejiste millas:${unit.value}`);
+      }
+    });
   }
 
-  if (!precioCombustibleValue) {
-    precioCombustibleAlert.innerHTML =
-      '<strong style="color:#ff8906">Ingrese un valor</strong>';
-    // return;
-  } else {
-    precioCombustibleAlert.innerHTML = "";
-  }
+  // console.log(unit);
 
-  if (consumoVehicularValue === "") {
-    consumoVehicularAlert.innerHTML =
-      '<strong style="color:#ff8906">Ingrese un valor</strong>';
-    return;
-  } else {
-    consumoVehicularAlert.innerHTML = "";
-  }
-
-  const consumoVehicularValueInt = Number(consumoVehicularValue);
-
-  if (consumoVehicularValueInt === 0) {
-    consumoVehicularAlert.innerHTML =
-      '<strong style="color:red">Valor invalido</strong>';
-    // return;
-  }
-
-  const constoTotal =
-    (distanciaValue / consumoVehicularValue) * precioCombustibleValue;
-
-  resultado.textContent = "$" + constoTotal + " COP";
-
-  distancia.value = "";
-  consumoVehicular.value = "";
-  precioCombustible.value = "";
-
+  // if (index === 2 && index < 5) {
+  //   console.log(`Unit: ${unit.value}\nIndex: ${index}`);
+  // }
 }
 
-btnCalculator.addEventListener("click", clickForm);
+function selectsValues(topic, index) {
+  // console.log(`Topic: ${topic.id}\nIndex: ${index}`);
+
+  // if (index === 0) {
+  //   topic.addEventListener("click", function asd() {
+  //     options.forEach(optionsValues);
+  //   });
+  // }
+  if (index === 0) {
+    topic.addEventListener("click", function asd() {
+      options.forEach(optionsValues);
+    });
+  }
+
+  // select.addEventListener("click", selectGeneral);
+}
+selects.forEach(selectsValues);
+
+function selectGeneral() {}
+
+selectGeneral();
+
+function submitForm() {
+  /* Calcular valores de entrada */
+
+  event.preventDefault();
+
+  console.log(options);
+  alert("Se envio el formulario");
+}
+
+form.addEventListener("submit", submitForm);

@@ -1,5 +1,3 @@
-import "../css/general.css"; // Estilos generales
-
 
 /* Desaparicion del menu al clickear los links - movil */
 const menuCheckbox = document.getElementById("hamburger-menu");
