@@ -14,62 +14,53 @@ const btnCalculator = document.getElementById("main__btn");
 
 const form = document.querySelector(".main__calculator");
 
-const selects = document.querySelectorAll(".main__select");
+const selectorUnidadesDistancia = document.querySelector(".main__select--1");
 
-const select = document.querySelector(".main__select");
+const unidadesDistancia = document.querySelectorAll(".main__option--distance");
 
-const options = document.querySelectorAll(".main__option");
-const option = document.querySelector(".main__option");
+// console.log(selectorUnidadesDistancia);
+// console.log(unidadesDistancia);
 
-function optionsValues(unit, index) {
-  /* Seleccion de las opciones dentro del select */
-  if (index <= 1) {
-    console.log(`Unit: ${unit.value}\nIndex: ${index}`);
+const unidadHijo = selectorUnidadesDistancia.children[1];
 
-    option.addEventListener("click", function sadf() {
-      console.log("Entro");
-      if (index === 1) {
-        console.log(`Elejiste millas:${unit.value}`);
-      }
-    });
+
+selectorUnidadesDistancia.addEventListener("click", function (event) {
+  if (event.target === unidadHijo) {
+    console.log("Hi world");
   }
+});
+// console.log(unidadHijo);
 
-  // console.log(unit);
+// unidadHijo.addEventListener("click", function () {
+//   console.log("Hi world");
+// });
 
-  // if (index === 2 && index < 5) {
-  //   console.log(`Unit: ${unit.value}\nIndex: ${index}`);
-  // }
-}
+console.log();
 
-function selectsValues(topic, index) {
-  // console.log(`Topic: ${topic.id}\nIndex: ${index}`);
+function indice(item, index) {
+  // console.log(`${item.value}\n${index}`);
 
-  // if (index === 0) {
-  //   topic.addEventListener("click", function asd() {
-  //     options.forEach(optionsValues);
-  //   });
-  // }
-  if (index === 0) {
-    topic.addEventListener("click", function asd() {
-      options.forEach(optionsValues);
+  if (index === 1) {
+    // console.log(item);
+
+    let itemValue = item.value;
+
+    item.addEventListener("click", function () {
+      console.log("millas clickeadas");
     });
+
+    // console.log(`${item.value}\n${index}`);
   }
-
-  // select.addEventListener("click", selectGeneral);
-}
-selects.forEach(selectsValues);
-
-function selectGeneral() {}
-
-selectGeneral();
-
-function submitForm() {
-  /* Calcular valores de entrada */
-
-  event.preventDefault();
-
-  console.log(options);
-  alert("Se envio el formulario");
 }
 
-form.addEventListener("submit", submitForm);
+unidadesDistancia.forEach(indice);
+
+selectorUnidadesDistancia.addEventListener("click", function () {
+  console.log("s");
+
+  // function index(item, index) {
+  //   console.log(item);
+  //   console.log(index);
+  // }
+  // unidadesDistancia.forEach(index);
+});
