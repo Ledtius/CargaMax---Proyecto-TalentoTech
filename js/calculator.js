@@ -14,53 +14,27 @@ const btnCalculator = document.getElementById("main__btn");
 
 const form = document.querySelector(".main__calculator");
 
-const selectorUnidadesDistancia = document.querySelector(".main__select--1");
+const selectorUnidadesDistancia = document.querySelector("#unidades-distancia");
 
-const unidadesDistancia = document.querySelectorAll(".main__option--distance");
+const inputDistancia = document.getElementById("distancia");
 
-// console.log(selectorUnidadesDistancia);
-// console.log(unidadesDistancia);
+const selectorUnidadesConsumo = document.querySelector("#unidades-cv");
 
-const unidadHijo = selectorUnidadesDistancia.children[1];
+selectorUnidadesDistancia.addEventListener("change", function distancias() {
+  const selectedOption =
+    selectorUnidadesDistancia.options[selectorUnidadesDistancia.selectedIndex];
 
+  const valorDistancia = selectedOption.textContent.trim();
 
-selectorUnidadesDistancia.addEventListener("click", function (event) {
-  if (event.target === unidadHijo) {
-    console.log("Hi world");
+  if (valorDistancia === "Millas") {
+    const km = 1.60934;
   }
 });
-// console.log(unidadHijo);
 
-// unidadHijo.addEventListener("click", function () {
-//   console.log("Hi world");
-// });
+selectorUnidadesConsumo.addEventListener("change", fun);
 
-console.log();
-
-function indice(item, index) {
-  // console.log(`${item.value}\n${index}`);
-
-  if (index === 1) {
-    // console.log(item);
-
-    let itemValue = item.value;
-
-    item.addEventListener("click", function () {
-      console.log("millas clickeadas");
-    });
-
-    // console.log(`${item.value}\n${index}`);
-  }
-}
-
-unidadesDistancia.forEach(indice);
-
-selectorUnidadesDistancia.addEventListener("click", function () {
-  console.log("s");
-
-  // function index(item, index) {
-  //   console.log(item);
-  //   console.log(index);
-  // }
-  // unidadesDistancia.forEach(index);
+btnCalculator.addEventListener("click", function () {
+  let inputDistanciaValue = Number(inputDistancia.value);
+  event.preventDefault();
+  console.log(inputDistanciaValue);
 });
