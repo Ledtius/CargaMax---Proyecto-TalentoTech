@@ -12,7 +12,7 @@ const precioCombustibleAlert = document.getElementById("input__alert-3");
 
 const btnCalculator = document.getElementById("main__btn");
 
-const form = document.querySelector(".main__calculator");
+const calculator = document.querySelector(".main__calculator");
 
 const selectorUnidadesDistancia = document.querySelector("#unidades-distancia");
 
@@ -26,39 +26,30 @@ const selectorUnidadesPrecio = document.getElementById("unidades-p/c");
 
 const inputPrecio = document.getElementById("precio-combustible");
 
-selectorUnidadesDistancia.addEventListener("change", function distancias() {
-  const opcionSeleccionada =
-    selectorUnidadesDistancia.options[selectorUnidadesDistancia.selectedIndex];
-
-  const valorDistancia = opcionSeleccionada.textContent.trim();
-
-  if (valorDistancia === "Millas") {
-    const km = 1.60934;
-  }
-});
-
-selectorUnidadesConsumo.addEventListener("change", function () {
-  const opcionSeleccionada =
-    selectorUnidadesConsumo.options[selectorUnidadesConsumo.selectedIndex];
-
-  console.log(opcionSeleccionada.textContent.trim());
-});
-
-selectorUnidadesPrecio.addEventListener("change", function () {
-  const opcionSeleccionada =
-    selectorUnidadesPrecio.options[selectorUnidadesPrecio.selectedIndex];
-
-  console.log(opcionSeleccionada.textContent.trim());
-});
-
-inputDistancia.addEventListener("input", function () {
-  console.log(inputDistancia.value);
-});
-
-btnCalculator.addEventListener("click", function () {
-  let inputDistanciaValue = Number(inputDistancia.value);
-  let inputConsumoValue = Number(inputConsumo.value);
+calculator.addEventListener("submit", function () {
   event.preventDefault();
-  console.log(inputDistanciaValue);
-  console.log(inputConsumoValue);
+
+  /* Valores de los inputs */
+
+  const inputDistanciaValue = Number(inputDistancia.value);
+  const inputConsumoValue = Number(inputConsumo.value);
+  const inputPrecioValue = Number(inputPrecio.value);
+
+  /* Convercion de unidades */
+
+  let km = inputDistanciaValue;
+  let mi = km * 1.60934;
+
+  let kmPorL = inputConsumoValue;
+  let LPor100Km = 100 / kmPorL;
+
+  let copPorL = inputPrecioValue;
+  let copPorGal = copPorL * 3.78541;
+
+  console.log(`Km: ${km}`);
+  console.log(`Mi: ${mi}`);
+  console.log(`Km/L: ${kmPorL}`);
+  console.log(`L/100Km: ${LPor100Km}`);
+  console.log(`COP$/L: ${copPorL}`);
+  console.log(`COP$/Gal: ${copPorGal}`);
 });
