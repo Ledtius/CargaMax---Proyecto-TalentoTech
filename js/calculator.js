@@ -140,3 +140,4 @@ calculator.addEventListener("submit", function () {
 
 /* NOTA: */
 /* Para los estilos si tengo que usar un addEventListener para cambiar el laberl y el placeholder del input */
+/* Mass notas */
