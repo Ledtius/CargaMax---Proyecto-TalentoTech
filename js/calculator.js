@@ -1,12 +1,20 @@
+const distanciaUnit = document.querySelector(".main__unit-chage--distace");
+
 const distancia = document.getElementById("distancia");
 
 const distanciaAlert = document.getElementById("input__alert");
 
 const consumoVehicular = document.getElementById("consumo-vehicular");
 
+const consumoVehicularUnit = document.querySelector(".main__unit-chage--spend");
+
 const consumoVehicularAlert = document.getElementById("input__alert-2");
 
 const precioCombustible = document.getElementById("precio-combustible");
+
+const precioCombustibleUnit = document.querySelector(
+  ".main__unit-chage--moneyl"
+);
 
 const precioCombustibleAlert = document.getElementById("input__alert-3");
 
@@ -135,7 +143,7 @@ calculator.addEventListener("submit", function () {
 
   let resultado = (valorDistancia / valorConsumo) * valorPrecio;
 
-  resultadoPantalla.innerHTML = resultado;
+  resultadoPantalla.innerText = "$ " + resultado + " COP";
 });
 
 selectorUnidadesDistancia.addEventListener("change", function () {
@@ -144,8 +152,23 @@ selectorUnidadesDistancia.addEventListener("change", function () {
 
   if (opcionSeleccionada.textContent.trim() === "Mi") {
     inputDistancia.setAttribute("placeholder", "Mi");
+    distanciaUnit.innerText = " (Mi)";
   } else {
     inputDistancia.setAttribute("placeholder", "Km");
+    distanciaUnit.innerText = " (Km)";
+  }
+});
+
+selectorUnidadesConsumo.addEventListener("change", function () {
+  let opcionSeleccionada2 =
+    selectorUnidadesConsumo.options[selectorUnidadesConsumo.selectedIndex];
+
+  if (opcionSeleccionada2.textContent.trim() === "L/100Km") {
+    consumoVehicularUnit.innerText = "(L/100km)";
+    inputConsumo.setAttribute("placeholder", "L/100km");
+  } else {
+    consumoVehicularUnit.innerText = "(Km/L)";
+    inputConsumo.setAttribute("placeholder", "Km/L");
   }
 });
 
