@@ -138,6 +138,17 @@ calculator.addEventListener("submit", function () {
   resultadoPantalla.innerHTML = resultado;
 });
 
+selectorUnidadesDistancia.addEventListener("change", function () {
+  let opcionSeleccionada =
+    selectorUnidadesDistancia.options[selectorUnidadesDistancia.selectedIndex];
+
+  if (opcionSeleccionada.textContent.trim() === "Mi") {
+    inputDistancia.setAttribute("placeholder", "Mi");
+  } else {
+    inputDistancia.setAttribute("placeholder", "Km");
+  }
+});
+
 /* NOTA: */
 /* Para los estilos si tengo que usar un addEventListener para cambiar el laberl y el placeholder del input */
 /* Add new comment */
