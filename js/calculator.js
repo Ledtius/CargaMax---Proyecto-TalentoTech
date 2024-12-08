@@ -160,15 +160,28 @@ selectorUnidadesDistancia.addEventListener("change", function () {
 });
 
 selectorUnidadesConsumo.addEventListener("change", function () {
-  let opcionSeleccionada2 =
+  let opcionSeleccionada =
     selectorUnidadesConsumo.options[selectorUnidadesConsumo.selectedIndex];
 
-  if (opcionSeleccionada2.textContent.trim() === "L/100Km") {
+  if (opcionSeleccionada.textContent.trim() === "L/100Km") {
     consumoVehicularUnit.innerText = "(L/100km)";
     inputConsumo.setAttribute("placeholder", "L/100km");
   } else {
     consumoVehicularUnit.innerText = "(Km/L)";
     inputConsumo.setAttribute("placeholder", "Km/L");
+  }
+});
+
+selectorUnidadesPrecio.addEventListener("change", function () {
+  let opcionSeleccionada =
+    selectorUnidadesPrecio.options[selectorUnidadesPrecio.selectedIndex];
+
+  if (opcionSeleccionada.textContent.trim() === "COP$/Gal") {
+    precioCombustibleUnit.innerText = "(COP$/Gal)";
+    inputPrecio.setAttribute("placeholder", "COP$/Gal");
+  } else {
+    precioCombustibleUnit.innerText = "(COP$/L)";
+    inputPrecio.setAttribute("placeholder", "COP$/L");
   }
 });
 
