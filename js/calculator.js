@@ -65,7 +65,33 @@ function observadorOpcionPrecio() {
   return opcionSeleccionadaValue;
 }
 
-// selectorUnidadesDistancia.addEventListener("change", observadorOpcionDistancia);
+/* Alertas de ingreso de valores */
+
+btnCalculator.addEventListener("click", function () {
+  if (!inputDistancia.value) {
+    distanciaAlert.innerHTML =
+      '<strong style="color:#ff8906">Ingrese valor</strong>';
+  } else {
+    distanciaAlert.innerHTML = "";
+  }
+
+  if (!consumoVehicular.value) {
+    consumoVehicularAlert.innerHTML =
+      '<strong style="color:#ff8906">Ingrese valor</strong>';
+  } else if (Number(consumoVehicular.value) === 0) {
+    consumoVehicularAlert.innerHTML =
+      '<strong style= "color:#9d111e">Valor invalido</strong>';
+  } else {
+    consumoVehicularAlert.innerHTML = "";
+  }
+
+  if (!precioCombustible.value) {
+    precioCombustibleAlert.innerHTML =
+      '<strong style= "color:#ff8906">Ingrese valor</strong>';
+  } else {
+    precioCombustibleAlert.innerHTML = "";
+  }
+});
 
 calculator.addEventListener("submit", function () {
   event.preventDefault();
@@ -141,10 +167,16 @@ calculator.addEventListener("submit", function () {
     console.log(`COP$/Gal: ${valorPrecio}`);
   }
 
+  console.log(valorDistancia);
+
+  if (valorConsumo === 0) return;
+
   let resultado = (valorDistancia / valorConsumo) * valorPrecio;
 
   resultadoPantalla.innerText = "$ " + resultado + " COP";
 });
+
+/* Escuchadores de cambios de selects a labels*/
 
 selectorUnidadesDistancia.addEventListener("change", function () {
   let opcionSeleccionada =
@@ -185,6 +217,3 @@ selectorUnidadesPrecio.addEventListener("change", function () {
   }
 });
 
-/* NOTA: */
-/* Para los estilos si tengo que usar un addEventListener para cambiar el laberl y el placeholder del input */
-/* Add new comment */
